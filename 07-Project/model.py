@@ -69,6 +69,7 @@ preprocessor = ColumnTransformer(
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
 print("Shape of X_train:", X_train.shape)
 print("Shape of y_train:", y_train.shape)
+print(X_train.head(1))
 
 # Model pipeline
 regressor = Pipeline(steps=[
@@ -98,7 +99,7 @@ print("Predictions saved to 'youtube_channels_with_predictions.csv'")
 pickle.dump(regressor, open('/workspaces/MLOps_Zoomcamp_Project_YoutubePrediction/models/model.pkl','wb'))
 
 # Loading model to compare the results
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('/workspaces/MLOps_Zoomcamp_Project_YoutubePrediction/models/model.pkl','rb'))
 
 # Example prediction with proper input structure
 new_data = pd.DataFrame({'VIEWS': [1000000], 'TOTAL_NUMBER_OF_VIDEOS': [500], 'CATEGORY': ['Entertainment']})
