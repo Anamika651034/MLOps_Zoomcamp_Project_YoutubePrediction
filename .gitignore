@@ -153,6 +153,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+.Anaconda3-2022.05-Linux-x86_64.sh
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
